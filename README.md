@@ -3,7 +3,7 @@ caskのインストール
 ```
 $ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python  
 ```  
-.bashrcでパスを通す  
+パスを通す  
 ```
 $ export PATH="/home/username/.cask/bin:$PATH"
 ```  
