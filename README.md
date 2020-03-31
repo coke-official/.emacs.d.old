@@ -5,9 +5,7 @@ $ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 ```  
 .bashrcでパスを通す  
 ```
-$ emacs ~/.bashrc  
-PATH="$HOME/.cask/bin:$PATH"  
-$ source ~/.bashrc  
+$ export PATH="/home/username/.cask/bin:$PATH"
 ```  
 .emacs.dを削除  
 ```
