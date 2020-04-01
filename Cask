@@ -27,3 +27,7 @@
 ;;common lisp
 (depends-on "slime")
 (depends-on "haskell-mode")
+;;haskell
+(depends-on "lsp-mode")
+(depends-on "lsp-ui" :git "https://github.com/emacs-lsp/lsp-ui.git")
+(depends-on "lsp-haskell" :git "https://github.com/emacs-lsp/lsp-haskell.git")
