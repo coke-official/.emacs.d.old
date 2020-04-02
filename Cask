@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 
+(depends-on "counsel")
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "exec-path-from-shell")
