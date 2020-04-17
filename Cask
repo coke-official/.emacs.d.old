@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 
+(depends-on "company")
 (depends-on "counsel")
 (depends-on "bind-key")
 (depends-on "cask")
@@ -36,3 +37,6 @@
 ;;clojure
 (depends-on "cider")
 (depends-on "clojure-mode")
+;;rust
+(depends-on "rust-mode")
+(depends-on "racer")
