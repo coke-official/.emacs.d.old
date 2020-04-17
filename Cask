@@ -19,6 +19,7 @@
 (depends-on "use-package")
 (depends-on "yasnippet")
 (depends-on "auto-complete")
+(depends-on "google-this")
 ;;python
 (depends-on "elpy")
 (depends-on "py-autopep8")
@@ -32,3 +33,6 @@
 (depends-on "lsp-mode")
 (depends-on "lsp-ui" :git "https://github.com/emacs-lsp/lsp-ui.git")
 (depends-on "lsp-haskell" :git "https://github.com/emacs-lsp/lsp-haskell.git")
+;;clojure
+(depends-on "cider")
+(depends-on "clojure-mode")

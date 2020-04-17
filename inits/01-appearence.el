@@ -6,7 +6,7 @@
 (load-theme 'wombat t)
 
 ;;Font
-(add-to-list 'default-frame-alist '(font . "ゆたぽん（コーディング）Backsl"))
+(add-to-list 'default-frame-alist '(font . "Yutapon coding RegularBackslash"))
 
 ;;Change font size with C-+ and C--
 (global-set-key [(control ?+)] (lambda () (interactive)
@@ -26,3 +26,27 @@
 ;;parenthesis hilight
 (setq show-paren-dilay 0)
 (show-paren-mode t)
+
+;;show pass of the file
+(setq frame-title-format "%f")
+
+;;show colomn number
+(column-number-mode t)
+
+;;set parameter
+(if window-system (progn
+            (set-frame-parameter (selected-frame) 'alpha '(0.80))
+            ))
+
+;;open space between operators
+(add-hook 'python-mode-hook #'electric-spacing-mode)
+(add-hook 'cc-mode-hook #'electric-spacing-mode)
+(add-hook 'lisp-mode-hook #'electric-spacing-mode)
+
+
+
+
+
+
+
+

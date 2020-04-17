@@ -19,9 +19,16 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
-::yasnippet
+;;yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
 
 ;;final new line
 (setq require-final-newline t)
+
+;;shell
+(define-key global-map (kbd "C-z") 'shell)
+
+;;google-this
+(google-this-mode t)
+(global-set-key (kbd "C-x g") 'google-this-mode-submap)

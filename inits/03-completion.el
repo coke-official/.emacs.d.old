@@ -10,3 +10,15 @@
 
 ;;parenthesis completion
 (electric-pair-mode 1)
+
+;;flycheck
+(setq flycheck-check-syntax-automatically 
+  '(save idle-change mode-enabled))
+    
+(setq flycheck-idle-change-delay 3)
+
+;; Python
+(add-hook 'python-mode-hook 'flycheck-mode)
+
+;; Ruby
+(add-hook 'ruby-mode-hook 'flycheck-mode)
