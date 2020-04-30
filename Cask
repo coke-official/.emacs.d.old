@@ -40,3 +40,6 @@
 ;;rust
 (depends-on "rust-mode")
 (depends-on "racer")
+;;web
+(depends-on "web-mode")
+(depends-on "company-web")
