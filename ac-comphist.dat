@@ -1,4 +1,6 @@
-((("rainbow-delimiters" .
+((("true" .
+   [1 0 0 0])
+  ("rainbow-delimiters" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("clojure-mode-hook" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
