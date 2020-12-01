@@ -32,3 +32,15 @@
 ;;google-this
 (google-this-mode t)
 (global-set-key (kbd "C-x g") 'google-this-mode-submap)
+
+;;change tab to 4 spaces
+(setq-default tab-width 4)
+(defun indent-hook ()
+  (setq indent-tabs-mode nil))
+(add-hook 'clojure-mode-hook #'indent-hook)
+(add-hook 'rust-mode-hook #'indent-hook)
+(add-hook 'haskell-mode-hook #'indent-hook)
+
+;;ssh
+(require 'tramp)
+(setq tramp-default-method "ssh")

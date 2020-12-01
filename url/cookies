@@ -1,0 +1,20 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".qiita.com"
+  [url-cookie "_qiita_login_session" "rcS%2F%2BJtZPTPDr%2FrY6OC9RkIu7cRlwws%2F9zntyX99PASyJThV90G0NzvOhrYO5te1mWFO%2FZF4Lf1NSDd99HrzJIuxT7eNQxNtMaZcbftDTUgxv8big737Ar558QZx22JW73n1I69jdu7NG7p0b3GhanjQJiFzfszwYoIIP6grDRN%2FknFeZWyoC1UOU8WqyNNh3uM6NJ%2BWIp1ohWzGoJCWpFVuwTAtM0BpISt1tMuq1SJv7t%2BrQmo6Beh1CEcl6CmtlFdEKBInNvBpKRX%2FynEo3vCEIuXf1OjnNruknSZOFA2ArpfdUKiBnWIUDLg2yjIegiGHK5THF0cIhGHq%2Frl9xVvUb%2Bb%2BYVPR4P6ZiK%2FQ--2eCJIs9p6JhhnC4S--Au1wvND7PWCkrmhqjinH0A%3D%3D" "Thu, 06 May 2021 11:35:15 GMT" "/" ".qiita.com" nil])
+ (".google.co.jp"
+  [url-cookie "NID" "203=q7yiwdbd9qJZQt3rznteMAHM3xGITdj6AP-FHkm9AFXlEzPh2T8hv8szLxMAmrk-tp4n3RQmpUJsdZBK1tAg4N4kqNukR6KReH5TRHbVz8bqrLgsPrqN2aSgLGcYtd86m8a1V2f0zsrV5JPf3oOoO_SzlzRqEe4W6P2LmTe-wSA" "Thu, 05-Nov-2020 11:34:14 GMT" "/" ".google.co.jp" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Mon, 02-Nov-2020 11:34:33 GMT" "/complete/search" ".google.co.jp" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Mon, 02-Nov-2020 11:34:33 GMT" "/search" ".google.co.jp" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".google.co.jp"
+  [url-cookie "1P_JAR" "2020-05-06-11" "Fri, 05-Jun-2020 11:37:09 GMT" "/" ".google.co.jp" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

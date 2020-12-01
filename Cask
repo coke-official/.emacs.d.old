@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 
+(depends-on "tramp")
 (depends-on "company")
 (depends-on "counsel")
 (depends-on "bind-key")
@@ -25,6 +26,8 @@
 (depends-on "elpy")
 (depends-on "py-autopep8")
 (depends-on "python-mode")
+(depends-on "virtualenvwrapper")
+(depends-on "auto-virtualenvwrapper")
 ;;c/c++
 (depends-on "cc-mode")
 ;;common lisp
@@ -37,9 +40,12 @@
 ;;clojure
 (depends-on "cider")
 (depends-on "clojure-mode")
+(depends-on "clj-refactor")
+(depends-on "rainbow-delimiters")
 ;;rust
 (depends-on "rust-mode")
 (depends-on "racer")
+(depends-on "flycheck-rust")
 ;;web
 (depends-on "web-mode")
 (depends-on "company-web")

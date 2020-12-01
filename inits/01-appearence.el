@@ -43,10 +43,5 @@
 (add-hook 'cc-mode-hook #'electric-spacing-mode)
 (add-hook 'lisp-mode-hook #'electric-spacing-mode)
 
-
-
-
-
-
-
-
+;;scroll margin
+(setq scroll-margin 7)

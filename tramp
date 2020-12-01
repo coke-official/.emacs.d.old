@@ -1,0 +1,23 @@
+;; -*- emacs-lisp -*- <20/08/19 13:21:29 /home/coke/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+(((tramp-file-name "ssh" "robot" nil "ev3dev.local" nil nil nil)
+  ("uname" "Linux 4.14.117-ev3dev-2.3.5-ev3")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("file-exists" "test -e")
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("id" "/usr/bin/id")
+  ("gid-string" "robot")
+  ("tmpdir" "/ssh:robot@ev3dev.local:/tmp")
+  ("uid-integer" 1000)
+  ("gid-integer" 1000)
+  ("readlink" "\\readlink")
+  ("case-insensitive" nil)))
