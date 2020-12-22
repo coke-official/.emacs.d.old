@@ -49,3 +49,10 @@
 ;;web
 (depends-on "web-mode")
 (depends-on "company-web")
+(depends-on "rjsx-mode")
+(depends-on "impatient-mode")
+;;docker
+(depends-on "docker")
+(depends-on "dockerfile-mode")
+(depends-on "docker-compose-mode")
+(depends-on "docker-tramp")

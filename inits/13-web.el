@@ -1,6 +1,7 @@
 (require 'web-mode)
 (require 'company)
 (require 'company-web-html)
+(require 'rjsx-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -44,3 +45,4 @@
                         (if tern-mode (tern-mode -1)))))))
   
 (add-hook 'web-mode-hook 'web-mode-hook)
+(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))

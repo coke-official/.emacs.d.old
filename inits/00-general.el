@@ -44,3 +44,8 @@
 ;;ssh
 (require 'tramp)
 (setq tramp-default-method "ssh")
+
+;;enable clipboard
+(cond (window-system
+(setq x-select-enable-clipboard t)
+))
