@@ -2,6 +2,7 @@
 (require 'company)
 (require 'company-web-html)
 (require 'rjsx-mode)
+(require 'flycheck)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -18,8 +19,6 @@
 
   ;; indent
   (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
 
   (setq web-mode-style-padding 1)
   (setq web-mode-script-padding 1)
@@ -44,6 +43,23 @@
                               (string= web-mode-cur-language "jsx"))
                           (unless tern-mode (tern-mode))
                         (if tern-mode (tern-mode -1)))))))
-  
+
+(add-hook 'rjsx-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil) ;;インデントはタブではなくスペース
+            (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
+            (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
+
 (add-hook 'web-mode-hook 'web-mode-hook)
 (add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+
+;; eslint 用の linter を登録
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
+;; flowtype 用の linter を登録
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
+;; 作業している project の node-module をみて、適切に
+;; linter の設定を読み込む
+(eval-after-load 'web-mode
+  '(add-hook 'web-mode-hook #'add-node-modules-path))
