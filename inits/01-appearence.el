@@ -1,10 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;Setting of appearance
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;Theme
-(load-theme 'wombat t)
-
+;;theme
+(require 'color-theme-sanityinc-tomorrow)
 ;;Font
 (add-to-list 'default-frame-alist '(font . "Yutapon coding RegularBackslash"))
 
