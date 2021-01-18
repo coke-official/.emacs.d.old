@@ -3,6 +3,7 @@
 (require 'company-web-html)
 (require 'rjsx-mode)
 (require 'flycheck)
+(require 'json-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -12,13 +13,18 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '(".*\\.js[x]\\'" . rjsx-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
 
   ;; indent
+  (setq-default indent-tabs-mode nil)
+  (setq tab-width 2)
   (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
 
   (setq web-mode-style-padding 1)
   (setq web-mode-script-padding 1)
@@ -39,3 +45,7 @@
             (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
             (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
 
+(add-hook 'json-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))

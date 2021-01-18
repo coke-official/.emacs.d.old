@@ -51,6 +51,7 @@
 (depends-on "company-web")
 (depends-on "rjsx-mode")
 (depends-on "impatient-mode")
+(depends-on "json-mode")
 ;;docker
 (depends-on "docker")
 (depends-on "dockerfile-mode")
