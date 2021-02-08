@@ -1,8 +1,6 @@
 (require 'web-mode)
-(require 'company)
-(require 'company-web-html)
+(require 'ivy)
 (require 'rjsx-mode)
-(require 'flycheck)
 (require 'json-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -14,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-(add-to-list 'auto-mode-alist '(".*\\.js[x]\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
@@ -41,9 +39,9 @@
 
 (add-hook 'rjsx-mode-hook
           (lambda ()
-            (setq indent-tabs-mode nil) ;;インデントはタブではなくスペース
-            (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
-            (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
+            (setq indent-tabs-mode nil)
+            (setq js-indent-level 2)
+            (setq js2-strict-missing-semi-warning nil)))
 
 (add-hook 'json-mode-hook
           (lambda ()

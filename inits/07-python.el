@@ -1,29 +1,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;python setting
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'python-mode)
+(package-initialize)
 (elpy-enable)
+(defvar venv-default "~/.virtualenvs/py3")
+(pyvenv-activate venv-default)
 (elpy-use-ipython)
-
-
-;;use flycheck with elpy
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
-
-;;pep8 compliance
-(require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-(define-key python-mode-map (kbd "C-c F") 'py-autopep8);;reforming all codes in the buffer
-(setq py-autopep8-options '("--max-line-length=100"))
-
-add-hook 'python-mode-hook
-	  '(lambda()
-	     (setq indent-tabs-mode nil)
-	     (setq indent-level 4)
-	     (setq python-indent 4)))
-
-;;virtualenvwrapper
-(require 'virtualenvwrapper)
-(require 'auto-virtualenvwrapper)
-(add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate)
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
+(setq elpy-rpc-backend "jedi")

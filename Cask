@@ -24,10 +24,7 @@
 (depends-on "google-this")
 ;;python
 (depends-on "elpy")
-(depends-on "py-autopep8")
-(depends-on "python-mode")
 (depends-on "virtualenvwrapper")
-(depends-on "auto-virtualenvwrapper")
 ;;c/c++
 (depends-on "cc-mode")
 ;;common lisp
