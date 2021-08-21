@@ -49,6 +49,8 @@
 (depends-on "rjsx-mode")
 (depends-on "impatient-mode")
 (depends-on "json-mode")
+(depends-on "typescript-mode")
+(depends-on "tide")
 ;;docker
 (depends-on "docker")
 (depends-on "dockerfile-mode")

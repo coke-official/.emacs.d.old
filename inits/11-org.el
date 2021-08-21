@@ -29,3 +29,6 @@
 
 (setq org-default-notes-file "~/Dropbox/org//log.org")
 (setq org-agenda-files (list org-default-notes-file ))
+
+;; org-mode 行の折り返し
+(setq org-startup-truncated nil)

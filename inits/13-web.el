@@ -47,3 +47,17 @@
           (lambda ()
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)))
+
+;; typescript
+(straight-use-package 'typescript-mode)
+(straight-use-package 'tide)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-hook 'typescript-mode-hook
+          '(lambda ()
+             (interactive)
+             (tide-setup)
+             (flycheck-mode +1)
+             (tide-hl-identifier-mode +1)
+             (company-mode +1)
+             (eldoc-mode +1)
+             ))

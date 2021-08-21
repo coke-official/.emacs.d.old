@@ -49,3 +49,8 @@
 (cond (window-system
 (setq x-select-enable-clipboard t)
 ))
+
+;;backup files
+(setq backup-directory-alist '((".*" . "~/.ehist")))
+(setq auto-save-default nil)
+
