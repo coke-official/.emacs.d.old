@@ -7,7 +7,9 @@ $ sudo apt-get install emacs26
 ```  
 caskのインストール  
 ```
-$ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python  
+$ git clone https://github.com/cask/cask ~/.cask
+$ PATH=$HOME/.cask/bin:$PATH
+$ echo 'PATH=$HPME/.cask/bin:$PATH' >> .bashrc
 ```  
 パスを通す  
 ```
