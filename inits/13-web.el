@@ -2,6 +2,8 @@
 (require 'ivy)
 (require 'rjsx-mode)
 (require 'json-mode)
+(require 'typescript-mode)
+(require 'tide)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -13,6 +15,8 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
@@ -33,7 +37,8 @@
   (setq web-mode-enable-auto-closing t)
   (setq web-mode-enable-css-colorization t)
   (setq web-mode-enable-current-column-highlight t)
-  (setq web-mode-auto-close-style 2)
+  (setq web-mode-auto-close-style 1)
+  (setq web-mode-tag-auto-close-style 1)
 )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
@@ -49,9 +54,6 @@
             (setq js-indent-level 2)))
 
 ;; typescript
-(straight-use-package 'typescript-mode)
-(straight-use-package 'tide)
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 (add-hook 'typescript-mode-hook
           '(lambda ()
              (interactive)
@@ -61,3 +63,4 @@
              (company-mode +1)
              (eldoc-mode +1)
              ))
+(add-hook 'before-save-hook 'tide-format-before-save)

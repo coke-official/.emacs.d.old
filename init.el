@@ -33,7 +33,7 @@
  '(frame-background-mode (quote dark))
  '(package-selected-packages
    (quote
-	(ein color-theme-sanityinc-tomorrow virtualenv auto-virtualenv auto-virtualenvwrapper virtualenvwrapper ansi package-build shut-up epl git commander f dash s)))
+	(jedi ein color-theme-sanityinc-tomorrow virtualenv auto-virtualenv auto-virtualenvwrapper virtualenvwrapper ansi package-build shut-up epl git commander f dash s)))
  '(python-shell-interpreter "ipython")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map

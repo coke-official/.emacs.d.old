@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;python setting
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (package-initialize)
 (elpy-enable)
 (defvar venv-default "~/.virtualenvs/py3")
@@ -50,3 +51,13 @@
   (smartrep-define-key ein:notebook-mode-map "C-c"
     '(("C-n" . 'ein:worksheet-goto-next-input-km)
       ("C-p" . 'ein:worksheet-goto-prev-input-km))))
+(require 'python-mode)
+(setq auto-mode-alist (cons '("\\.py\\'" . python-mode) auto-mode-alist))
+
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+(require 'virtualenvwrapper)
+(require 'auto-virtualenvwrapper)
+(add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate)
